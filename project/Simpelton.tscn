@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4p7bctw2habd"]
+
+[ext_resource type="Script" path="res://Simpelton.gd" id="1_40qcr"]
+
+[node name="Simpelton" type="Node2D"]
+script = ExtResource("1_40qcr")

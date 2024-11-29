@@ -1,0 +1,217 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6kmhit84owpt"]
+
+[ext_resource type="Script" path="res://Leaderboard.gd" id="1_5n4ew"]
+[ext_resource type="FontFile" uid="uid://hkck2hatxl55" path="res://CAMBRIA.TTC" id="2_ojeem"]
+
+[node name="Leaderboard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5n4ew")
+
+[node name="Return" type="Button" parent="."]
+layout_mode = 1
+offset_left = 268.0
+offset_top = 32.0
+offset_right = 336.0
+offset_bottom = 63.0
+text = "Return "
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 356.0
+offset_top = 32.0
+offset_right = 796.0
+offset_bottom = 592.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -138.0
+offset_top = -20.0
+offset_right = 138.0
+offset_bottom = 131.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.945405, 0.695933, 0.37249, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.988824, 0.880419, 0.754692, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_ojeem")
+theme_override_font_sizes/font_size = 128
+text = "π"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.0
+offset_top = 62.0
+offset_right = 151.0
+offset_bottom = 213.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.192157, 0.305882, 0.756863, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.331452, 0.471315, 0.920252, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_ojeem")
+theme_override_font_sizes/font_size = 42
+text = "Math Champions"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleBG" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -105.0
+offset_right = 65.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="Panel/TitleBG"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -14.5
+offset_right = 50.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Leaderboard"
+
+[node name="Position" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -68.0
+offset_right = -70.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Placing" type="Label" parent="Panel/Position"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.5
+offset_right = 31.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Position"
+
+[node name="PositionList" type="Label" parent="Panel/Position"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -134.0
+offset_right = 21.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="Player" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -68.0
+offset_right = 65.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Players" type="Label" parent="Panel/Player"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.5
+offset_right = 24.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Player
+"
+
+[node name="PlayerList" type="Label" parent="Panel/Player"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -131.0
+offset_right = 28.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="Score" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = -68.0
+offset_right = 200.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scores" type="Label" parent="Panel/Score"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.5
+offset_right = 21.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Score"
+
+[node name="ScoreList" type="Label" parent="Panel/Score"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 23.0
+offset_right = 89.0
+offset_bottom = 280.0
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

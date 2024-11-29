@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl3ajmgxkjb1x"]
+
+[ext_resource type="Script" path="res://Gameover.gd" id="1_ypupk"]
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ypupk")
+
+[node name="Main Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 213.0
+offset_right = 687.0
+offset_bottom = 268.0
+text = "Main Menu"
+
+[node name="Play Again" type="Button" parent="."]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 316.0
+offset_right = 707.0
+offset_bottom = 388.0
+text = "Play Again"
+
+[node name="Gameover" type="Label" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 86.0
+offset_right = 613.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 24
+text = "Game Over"
+
+[node name="ScoreReached" type="Label" parent="."]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 138.0
+offset_right = 671.0
+offset_bottom = 211.0
+text = "Score text placeholder"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Play Again" to="." method="_on_play_again_pressed"]

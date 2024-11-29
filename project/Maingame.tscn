@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://o33qsk3qibcf"]
+
+[ext_resource type="Script" path="res://Maingame.gd" id="1_olmjw"]
+[ext_resource type="PackedScene" uid="uid://jh1twbjxu5r2" path="res://Player.tscn" id="2_qf71q"]
+[ext_resource type="PackedScene" uid="uid://bdb53dhim1e5i" path="res://health_ui.tscn" id="3_3qjsh"]
+[ext_resource type="AudioStream" uid="uid://cnrt0ccsn352j" path="res://1correctAnswer.mp3" id="4_a82mp"]
+[ext_resource type="AudioStream" uid="uid://c68uuwc34i7wr" path="res://1incorrectAnswer.mp3" id="5_3vbv7"]
+
+[node name="Spillet" type="Node2D"]
+script = ExtResource("1_olmjw")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+
+[node name="AnswerInput" type="LineEdit" parent="."]
+offset_left = 501.0
+offset_top = 223.0
+offset_right = 650.0
+offset_bottom = 283.0
+
+[node name="Player" parent="." instance=ExtResource("2_qf71q")]
+
+[node name="HealthUI" parent="." instance=ExtResource("3_3qjsh")]
+
+[node name="CorrectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_a82mp")
+volume_db = 7.162
+
+[node name="IncorrectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3vbv7")
+volume_db = 3.962
+
+[node name="Scores" type="Label" parent="."]
+offset_left = 1016.0
+offset_top = 3.0
+offset_right = 1118.0
+offset_bottom = 58.0
+text = "Score: 0
+Highscore: 0"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 607.0
+offset_right = 52.0
+offset_bottom = 638.0
+text = "Quit"
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

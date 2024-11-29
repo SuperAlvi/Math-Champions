@@ -1,0 +1,176 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfjofbs74jbvm"]
+
+[ext_resource type="Script" path="res://Inventory.gd" id="1_qojek"]
+
+[node name="Inventar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qojek")
+
+[node name="Tilbage" type="Button" parent="."]
+layout_mode = 1
+offset_left = 268.0
+offset_top = 44.0
+offset_right = 336.0
+offset_bottom = 75.0
+text = "Return"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -280.0
+offset_right = 220.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -270.0
+offset_right = 210.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="Virus" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🦠"
+
+[node name="Ant" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🐜"
+
+[node name="Larva" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🐛"
+
+[node name="Butterfly" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🦋"
+
+[node name="Chicken" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🐤"
+
+[node name="Dove" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🕊"
+
+[node name="Duck" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🦆"
+
+[node name="Penguin" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🐧"
+
+[node name="Monkey" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🐒"
+
+[node name="Gorilla" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🦍"
+
+[node name="Cow" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🐄"
+
+[node name="Rhinoceros" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🦏"
+
+[node name="Elephant" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🐘"
+
+[node name="Whale" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🐋"
+
+[node name="T-Rex" type="Button" parent="Panel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "🦖"
+
+[node name="SkinRequirement" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 185.0
+offset_right = 1135.0
+offset_bottom = 353.0
+
+[node name="Requirement" type="Label" parent="SkinRequirement"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 320.0
+offset_bottom = 166.0
+
+[connection signal="pressed" from="Tilbage" to="." method="_on_tilbage_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Virus" to="." method="_on_bakterie_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Ant" to="." method="_on_ant_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Larva" to="." method="_on_larve_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Butterfly" to="." method="_on_sommerfugl_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Chicken" to="." method="_on_kylling_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Dove" to="." method="_on_due_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Duck" to="." method="_on_and_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Penguin" to="." method="_on_pingvin_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Monkey" to="." method="_on_abe_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Gorilla" to="." method="_on_gorilla_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Cow" to="." method="_on_ko_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Rhinoceros" to="." method="_on_næsehorn_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Elephant" to="." method="_on_elefant_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/Whale" to="." method="_on_hval_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/GridContainer/T-Rex" to="." method="_on_t_rex_pressed"]

@@ -1,0 +1,120 @@
+[gd_scene load_steps=3 format=3 uid="uid://cji5erjp6kyt4"]
+
+[ext_resource type="Script" path="res://Login.gd" id="1_gtev6"]
+[ext_resource type="FontFile" uid="uid://hkck2hatxl55" path="res://CAMBRIA.TTC" id="2_oh0sa"]
+
+[node name="Login-Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gtev6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -280.0
+offset_right = 220.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -138.0
+offset_right = 138.0
+offset_bottom = 151.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.945405, 0.695933, 0.37249, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.988824, 0.880419, 0.754692, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_oh0sa")
+theme_override_font_sizes/font_size = 128
+text = "π"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.0
+offset_top = 82.0
+offset_right = 151.0
+offset_bottom = 233.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.192157, 0.305882, 0.756863, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.331452, 0.471315, 0.920252, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_oh0sa")
+theme_override_font_sizes/font_size = 42
+text = "Math Champions"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -29.0
+offset_right = 138.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Username" type="LineEdit" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Username"
+middle_mouse_paste_enabled = false
+
+[node name="Password" type="LineEdit" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Password"
+
+[node name="Login" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Login"
+
+[node name="Invis square" type="Button" parent="Panel/GridContainer"]
+visibility_layer = 0
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "----------------"
+
+[node name="CreateAccount" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Create Account
+"
+
+[connection signal="pressed" from="Panel/GridContainer/Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="Panel/GridContainer/CreateAccount" to="." method="_on_CreateAccount_pressed"]

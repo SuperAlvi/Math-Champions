@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://jh1twbjxu5r2"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_vl275"]
+[ext_resource type="AudioStream" uid="uid://ta60vhromxii" path="res://1takeDamage.mp3" id="2_v6abx"]
+
+[sub_resource type="Curve2D" id="Curve2D_73mwe"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1160, 668.996, 0, 0, 0, 0, 580.185, 668.996, 0, 0, 0, 0, -7.99997, 668.996, 0, 0, 0, 0, -9.01386, -2.60929, 0, 0, 0, 0, 1160, -2.60929, 0, 0, 0, 0, 1160, 668.996)
+}
+point_count = 6
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g13ic"]
+size = Vector2(76, 72)
+
+[node name="Player" type="StaticBody2D" groups=["player"]]
+position = Vector2(577, 328)
+script = ExtResource("1_vl275")
+
+[node name="PlayerSkin" type="Label" parent="."]
+offset_left = -50.5
+offset_top = -27.0
+offset_right = 52.5
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 75
+text = "🦠"
+metadata/_edit_use_anchors_ = true
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-567.11, -321.482)
+scale = Vector2(0.986301, 0.964853)
+curve = SubResource("Curve2D_73mwe")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(1160, 668.996)
+rotation = 3.14159
+
+[node name="PlayerHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_g13ic")
+
+[node name="TakeDamageSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_v6abx")
+volume_db = 3.962
+max_polyphony = 2
